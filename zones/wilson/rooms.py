@@ -31,9 +31,11 @@ ROOMS: dict[int, Room] = {
                 {"direction": "down", "roomId": 1},
             ],
             "objects": [
-                O.spawn("Nuke shot"),
+                O.spawn("Nuke Shot"),
+                O.spawn("Stab Shot")
             ],
-            "mobs": [M.spawn("George Washington")],  # two independent students
+            "mobs": [M.spawn("George Washington"),
+                     M.spawn("Wemmbu")],
         }
     ),
 }
