@@ -1,7 +1,7 @@
 """
 zones.the_planes.objects
 ──────────────────────
-Object templates for The Void zone.
+Object templates for The Planes zone.
 
 Add an entry to TEMPLATES for every object that can appear in this zone.
 The "class" key picks the instantiation class (Object / Item / Weapon).
