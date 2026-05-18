@@ -50,12 +50,12 @@ ROOMS: dict[int, Room] = {
             "indoors": False,
             "terrain": "grass plane",
             "exits": [
-                {"direction": "north", "roomId": 4},
-                {"direction": "south", "roomId": 5},
-                {"direction": "east", "roomId": 2},
-                {"direction": "west", "roomId": 3},
-                {"direction": "up", "roomId": 6},
-                {"direction": "down", "roomId": 7},
+                {"direction": "north", "roomId": 8},
+                {"direction": "south", "roomId": 9},
+                {"direction": "east", "roomId": 10},
+                {"direction": "west", "roomId": 11},
+                {"direction": "up", "roomId": 12},
+                {"direction": "down", "roomId": 13},
             ],
             "objects": [
                 O.spawn("The Horn"),
@@ -64,6 +64,33 @@ ROOMS: dict[int, Room] = {
             "mobs": [  
                 M.spawn("Joshua") ,
                 M.spawn("Israelite"),
+                M.spawn("Trumpet PLayer")
+            ],  # two independent students
+        }
+    ),
+    3: Room(
+        {
+            "number": 3,
+            "name": "Upper Room",
+            "description": "This is the very room that Jesus and his disciples ate in during the last supper.",
+            "indoors": True,
+            "terrain": "Clay floor",
+            "exits": [
+                {"direction": "north", "roomId": 14},
+                {"direction": "south", "roomId": 15},
+                {"direction": "east", "roomId": 16},
+                {"direction": "west", "roomId": 17},
+                {"direction": "up", "roomId": 18},
+                {"direction": "down", "roomId": 19},
+            ],
+            "objects": [
+                O.spawn("The Holy Grail"),
+                O.spawn("Bread"),
+                Ospawn("Wine")
+            ],
+            "mobs": [  
+                M.spawn("Jesus") ,
+                M.spawn(""),
                 M.spawn("Trumpet PLayer")
             ],  # two independent students
         }
