@@ -90,8 +90,15 @@ ROOMS: dict[int, Room] = {
             ],
             "mobs": [  
                 M.spawn("Jesus") ,
-                M.spawn(""),
-                M.spawn("Trumpet PLayer")
+                M.spawn("Peter"),
+                M.spawn("Matthew"),
+                M.spawn("Judas"),
+                M.spawn("John 1"),
+                M.spawn("John 2"),
+                M.spawn("Andrew"),
+                M.spawn("James"),
+                M.spawn("Philip"),
+                M.spawn("Bartholomew")
             ],  # two independent students
         }
     ),
