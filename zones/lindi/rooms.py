@@ -23,7 +23,7 @@ ROOMS: dict[int, Room] = {
     2: Room({
         "number": 2,
         "name": "room h",
-        "description": "a well decorated room, filled with historical artifacts.",
+        "description": "a well &decorated room, filled with historical artifacts.",
         "indoors": True,
         "terrain": "ground",
         "exits": [
@@ -31,7 +31,7 @@ ROOMS: dict[int, Room] = {
             {"direction": "south", "roomId": 1},
         ],
         "objects": [
-            O.spawn("Mrs.Allisons_syth"),
+            O.spawn("syth"),
         ],
         "mobs": [M.spawn("fellow_student")],
     }),
