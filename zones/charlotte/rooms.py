@@ -17,7 +17,7 @@ from . import mobs as M
 ROOMS: dict[int, Room] = {
 3001: Room(
         {
-            "number": 1,
+            "number": 3001,
             "name": "&GGarden&N of &gEden&N",
             "description": "&GThere&N &gis&N &Ga huge garden&N streching for miles.There is a &Gtree&N in the &gmiddle of the Garden&N.\n &YGod is watching over his creation&N.",
             "indoors": False,
@@ -39,9 +39,9 @@ ROOMS: dict[int, Room] = {
     ),
 3002: Room(
         {
-            "number": 2,
-            "name": "Jericho",
-            "description": "This is a city with a huge wall going around it to protect it.",
+            "number": 3002,
+            "name": "&CJ&N&ce&N&Cr&N&ci&N&Cc&N&ch&N&Co&N",
+            "description": "&wThis&N &Wis&N &wa&N city with a huge wall going around it to protect it.",
             "indoors": False,
             "terrain": "grass plane",
             "exits": [
@@ -61,7 +61,7 @@ ROOMS: dict[int, Room] = {
     ),
 3003: Room(
         {
-            "number": 3,
+            "number": 3003,
             "name": "Upper Room",
             "description": "This is the very room that Jesus and his disciples ate in during the last supper.",
             "indoors": True,
@@ -71,9 +71,9 @@ ROOMS: dict[int, Room] = {
                 {"direction": "north", "roomId": 3003},
             ],
             "objects": [
-                O.spawn("The Holy Grail"),
-                O.spawn("Bread"),
-                O.spawn("Wine")
+                O.spawn("The &YHoly&N &yGrail&N"),
+                O.spawn("&BBread&N"),
+                O.spawn("&RW&N&ri&N&Rn&N&re&N")
             ],
             "mobs": [  
                 M.spawn("Jesus") ,
