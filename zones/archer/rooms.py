@@ -70,14 +70,14 @@ ROOMS: dict[int, Room] = {
             {
                 "number": 3,
                 "name": "&xW&yo&xo&yd&xl&xa&yn&xd&N Manor Prison Room",
-                "description": "a room full of empty cells except one, the one with the wandering student inside",
+                "description": "a room full of empty cells except one, the one with the &yimprisoned Illrigger&N inside",
                 "indoors": True,
                 "terrain": "floors, cells, ceiling, and walls",
                 "exits": [
                     {"direction": "north", "roomId": 1}
                 ],
                 "mobs": [ 
-                    M.spawn("wandering_student"),
+                    M.spawn("&RIllrigger Rogue&N"),
                 ],
             }
         ),
@@ -95,7 +95,7 @@ ROOMS: dict[int, Room] = {
                     O.spawn("windsong"),
                 ],
                 "mobs": [ 
-                    M.spawn("&RIllrigger Rogue&N"),
+                    M.spawn("&MIllrigger Mage&N"),
                 ],
             }
         ),
