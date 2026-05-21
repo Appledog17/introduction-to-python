@@ -41,6 +41,38 @@ TEMPLATES: dict[str, dict] = {
         "hitroll":          2,
         "damroll":          4,
     },
+    # # # "" : {
+    # # #     "spawn_as":         ,
+    # # #     'name': "",
+    # # #     'key_words': ('', ''),
+    # # #     'room_description': "",
+    # # #     'description': "",
+    # # #     "weight":           4,
+    # # # },
+    # # #  "" : {
+    # # #     "spawn_as":         ,
+    # # #     'name': "",
+    # # #     'key_words': ('', ''),
+    # # #     'room_description': "",
+    # # #     'description': "",
+    # # #     "weight":           4,
+    # # # },
+    # # #  "" : {
+    # # #     "spawn_as":         ,
+    # # #     'name': "",
+    # # #     'key_words': ('', ''),
+    # # #     'room_description': "",
+    # # #     'description': "",
+    # # #     "weight":           4,
+    # # # },
+    # # #  "" : {
+    # # #     "spawn_as":         ,
+    # # #     'name': "",
+    # # #     'key_words': ('', ''),
+    # # #     'room_description': "",
+    # # #     'description': "",
+    # # #     "weight":           4,
+    # # # },
 
 }
 
