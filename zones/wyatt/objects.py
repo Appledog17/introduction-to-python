@@ -22,10 +22,10 @@ TEMPLATES: dict[str, dict] = {
         "description": "The battery seems worn",
         "weight": 7,
     },
-    "Raptors claw": {
+    "Dragons Talon": {
         "spawn_as": Weapon,
-        "name": "&Ga &Cs&Wh&Ca&Wrp&Ce&Ws&Ct &N&Rrusty&N karambit knife&N",
-        "key_words": ("Raptors", "Claw", "knife"),
+        "name": "&Ga &Ws&Nh&Wa&Nrp&We&Ns&Wt &N&Rrusty&N karambit knife&N",
+        "key_words": ("Dragons", "Talon", "knife"),
         "room_description": "&WA rusty&N &Ckarambit knife&N &Wthat is a&N &Rreddish&N color and &Gfolds.&N",
         "description": """&+gIts blade is made of a crystalline structure that has been carefully molded
 &+git has a weird glow whenever danger is near
