@@ -47,7 +47,7 @@ TEMPLATES: dict[str, dict] = {
         "spawn_as": Weapon,
         "name": "&RArm&N canon",
         "key_words": ("Arm", "canon"),
-        "room_description": "&WAn &RArm&N canon &Wthat sits on your arm... obviously.",
+        "room_description": "&WAn &RArm&N canon &Wthat is able to sit on your arm lays here... obviously.",
         "description": """&WIt's&N canon &Wis of &Mmagenta &Wcoloration and is a &Cstrong, &Wlightweight&N metal.
 &WIt looks like it can shoot &Ybullets &Wof pure &Mplasma&N
 &WIt is &Mmagenta&N, not &Rpink&N""",
