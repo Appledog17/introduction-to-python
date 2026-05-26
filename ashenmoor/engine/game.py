@@ -73,6 +73,9 @@ _COMMAND_MAP: dict[str, str] = {
     "powers":    "powers", "spells":    "powers",
     "skills":    "powers", "abilities": "powers",
     "who":   "who",
+    "goto":  "goto",
+    "scan":  "scan",
+    "scan":  "scan",
     "score": "score", "stats": "score", "stat": "score", "sc": "score",
     "stand": "stand", "wake": "stand",
     "sit":   "sit",
@@ -257,6 +260,9 @@ class GameState:
         elif verb == "equipment": return self._cmd_equipment()
         elif verb == "powers":    return self._cmd_powers()
         elif verb == "who":       return self._who()
+        elif verb == "scan":   return self._cmd_scan()
+        elif verb == "scan":   return self._cmd_scan()
+        elif verb == "goto":   return self._cmd_goto(args)
         elif verb == "score":  return self._cmd_score()
         elif verb == "stand":  return self._cmd_position("standing")
         elif verb == "sit":    return self._cmd_position("sitting")
@@ -523,6 +529,96 @@ class GameState:
         return "\n".join(lines)
 
     # ── Combat commands ───────────────────────────────────────────────────────
+
+    _SCAN_DIRS = [
+        ("n", "north"), ("e", "east"),  ("s", "south"),
+        ("w", "west"),  ("u", "up"),    ("d", "down"),
+    ]
+
+    def _cmd_scan(self) -> str:
+        """
+        Look in every direction from the current room.
+
+        For each direction that has an exit, print:
+            You look <direction>
+            <full room description>
+
+        Directions with no exit are silently skipped.
+        Blocked doors (closed/locked) show the exit but note it is blocked.
+        """
+        room = self.current_room
+        if room is None:
+            return "&RYou are nowhere.&N"
+
+        sections: list[str] = []
+
+        for short, full in self._SCAN_DIRS:
+            dest, blocked, msg = room.peek(short, self.rooms)
+            if dest is None:
+                continue   # no exit in this direction — skip silently
+
+            header = f"&wYou look &W{full}&w:&N"
+
+            if blocked:
+                sections.append(f"{header}\n&x(the way is blocked)&N")
+            else:
+                room_view = dest.render(self.locations, self.characters)
+                sections.append(f"{header}\n{room_view}")
+
+        if not sections:
+            return "&wYou see no exits from here.&N"
+
+        return "\n\n".join(sections)
+
+    def _cmd_scan(self) -> str:
+        """
+        Peek into every adjacent room and display its full description.
+
+        Directions are checked in order: N E S W U D.
+        Directions with no exit are skipped silently.
+        """
+        room = self.current_room
+        if room is None:
+            return "&RYou are nowhere.&N"
+
+        DIR_LABEL = [
+            ("n", "north"), ("e", "east"),  ("s", "south"),
+            ("w", "west"),  ("u", "up"),    ("d", "down"),
+        ]
+
+        sections: list[str] = []
+
+        for d, label in DIR_LABEL:
+            dest_vnum = room.exit_room_id(d)
+            if dest_vnum is None or dest_vnum not in self.rooms:
+                continue
+
+            dest = self.rooms[dest_vnum]
+            room_view = dest.render(self.locations, self.characters)
+
+            sections.append(
+                f"&+WYou look {label}&N\n"
+                f"{room_view}"
+            )
+
+        if not sections:
+            return "&wYou see no exits from here.&N"
+
+        return ("\n&w" + "─" * 40 + "&N\n").join(sections)
+
+    def _cmd_goto(self, args) -> str:
+        """goto <vnum> — teleport to any room. Dev command, no access check yet."""
+        if not args:
+            return "&wUsage: &Wgoto <vnum>&N"
+        try:
+            vnum = int(args[0])
+        except ValueError:
+            return f"&w'{args[0]}' is not a valid vnum.&N"
+        if vnum not in self.rooms:
+            return f"&wNo room with vnum &W{vnum}&w exists.&N"
+        self.locations[self.player] = vnum
+        self._save_location()
+        return self._cmd_look([])
 
     # ── score / position ─────────────────────────────────────────────────────
 
