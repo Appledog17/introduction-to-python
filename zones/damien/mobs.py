@@ -28,7 +28,7 @@ TEMPLATES: dict[str, dict] = {
         "name": "Inanis the Void Dragon",
         "key_words": ("inanis", "void", "dragon"),
         "room_description": "&mInanis&N the &XVoid&N &mDragon&N stands here looking &Ragitated&N.",
-        "description": ("This large &Mpurple&N and &Xblack&N dragon seems to have a shroud of &Xdarkness around it. Its eyes appear to be pits of &Xblackness"),
+        "description": ("This large &Mpurple&N and &Xblack&N dragon seems to have a shroud of &Xdarkness&N around it. Its eyes appear to be pits of &Xblackness&N"),
         "race": "Dragon",
         "class": "Watcher",
         "level": 50,

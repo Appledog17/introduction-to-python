@@ -36,6 +36,13 @@ TEMPLATES: dict[str, dict] = {
         "hitroll":          4,
         "damroll":          4,
     },
+    "hanging_tree" : {
+        "spawn_as":         Object,
+        'name': "The Hanging Tree",
+        'key_words': ('tree', 'hanging'),
+        'room_description': "An &Xominous&N, sad looking tree towers above you.",
+        'description': "A &xhanging tree&N, where they strung up a man they say &rmurdered&N three.",
+    },
 
 }
 

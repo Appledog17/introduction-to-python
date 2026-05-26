@@ -32,6 +32,7 @@ ROOMS: dict[int, Room] = {
             "objects": [
                 O.spawn("sack_of_darkness"),
                 O.spawn("sword_that_seals_the_darkness"),
+                O.spawn('hanging_tree')
             ],
             "mobs": [
                 M.spawn("void_dragon"),
@@ -44,7 +45,7 @@ ROOMS: dict[int, Room] = {
         {
             "number": 2,
             "name": "A Destroyed House",
-            "description": "You look around you at the devastated home. The roof is caved in, and there is dirty furniture and trinkets littered around the ground.",
+            "description": "You look around you at the devastated home. The roof is caved in, and there is dirty furniture and trinkets littered around the ground. There is a trapdoor in the floor in the back",
             "indoors": False,
             "terrain": "stone",
             "exits": [
@@ -52,6 +53,7 @@ ROOMS: dict[int, Room] = {
                 {"direction": "south", "roomId": 1},
                 {"direction": "east", "roomId": 1},
                 {"direction": "west", "roomId": 5},
+                {"direction": "down", "roomId": 7},
             ],
             "mobs": [
                 M.spawn("shadow_gremlin"),
@@ -124,4 +126,20 @@ ROOMS: dict[int, Room] = {
             ],
         }
     ),
+    7: Room(
+        {
+            "number": 7,
+            "name": "Mage's Dungeon",
+            "description": "You climb down the ladder into a small, stone room. There is a workbench with various contraptions, and many shelves with &Mw&Ge&Yi&Cr&Md&Gl&Yy &Cc&Mo&Gl&Yo&Cr&Me&Gd &Yl&Ci&Mq&Gu&Yi&Cd&Ms.",
+            "indoors": False,
+            "terrain": "stone",
+            "exits": [
+                {"direction": "up", "roomId": 2},
+            ],
+            "mobs": [
+                M.spawn("dark_mage"),
+            ],
+        }
+    ),
+
 }
