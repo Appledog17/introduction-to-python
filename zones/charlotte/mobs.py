@@ -52,7 +52,7 @@ TEMPLATES: dict[str, dict] = {
         "aggro": False,
         "wander": False,
     },
-    "Slippery Serpant": {
+    "": {
         "name": "Slipery Serpent",
         "key_words": ("Slippery","Serpant"),
         "room_description": "The Serpant is resting on the end of the tree branch Tricking the woman.",

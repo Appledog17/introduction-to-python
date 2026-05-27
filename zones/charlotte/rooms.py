@@ -19,23 +19,23 @@ ROOMS: dict[int, Room] = {
 1: Room(
         {
             "number": 1,
-            "name": "The &CO&N&Bf&N&Cf&N&Bi&N&Cc&N&Be&N",#this is the office
-            "description": "The office is where &BM&N&R&R&N&BS&N&R.S&N&Bt&N&Ra&N&Bc&N&Re&N&By&N stays during the day. The Office is at the front of the school./n To the left is Mr. Carlson's Office. To the right is a wall with pictures of all the teachers. Up is the celling with lose tiles that might be moveable./n Down is the carpet floor not for much use. Forward is a pack hall way.",
-            "indoors": True,                        #Mrs.Stacey^
-            "terrain": "carpet floor",
+            "name": "The Front Doors",#this is the Front doors
+            "description": "The Front doors is the entrance to the school. There are two doors that open in. These doors may or may not be locked for safety./n  left is the office, right is the wall, south is the",
+            "indoors": False,                        
+            "terrain": "concrete",
             "exits": [
                 {"direction": "west", "roomId": 2},
                 {"direction": "down", "roomId": 99002, "external": True}
                 
             ],
             "objects": [
-              #  O.spawn("Pencil"),
-            #    O.spawn("Key"),
-              #  O.spawn("Computer"),
+              #  O.spawn(""),
+              #  O.spawn(""),
+              #  O.spawn(""),
             ],
-            "mobs": [
-               # M.spawn("MRS.Stacey") ,
-               # M.spawn("MRS.Stublefield"),],  # two independent students
+            "mobs": [],
+               # M.spawn("") ,
+               # M.spawn(""),],  # two independent students
 
         }
     ),
@@ -43,51 +43,45 @@ ROOMS: dict[int, Room] = {
         {
             "number": 2,
             "name": "",
-            "description": "&wThis is a city with a huge wall going around it to protect it.&N",
+            "description": "",
             "indoors": False,
-            "terrain": "grass plane",
+            "terrain": "",
             "exits": [
                 {"direction": "east", "roomId": 1},
                 {"direction": "north", "roomId": 3},
             ],
             "objects": [
-                O.spawn("The Horn"),
-                O.spawn("Tunic")
+              #  O.spawn("The Horn"),
+              # O.spawn("Tunic")
             ],
             "mobs": [  
-                M.spawn("Joshua") ,
-                M.spawn("Israelite"),
-                M.spawn("Trumpet Player")
+                #M.spawn("Joshua") ,
+                #M.spawn("Israelite"),
+                #M.spawn("Trumpet Player")
             ],  # two independent students
         }
     ),
 3: Room(
         {
             "number": 3,
-            "name": "&wU&N&Wp&N&wp&N&We&N&wr&N &WR&N&Wo&N&wo&N&Wm&N",
-            "description": "&WThis is the very room that Jesus and his disciples ate in during the last supper.&N",
+            "name": "",
+            "description": ".",
             "indoors": True,
-            "terrain": "Clay floor",
+            "terrain": "",
             "exits": [
                 {"direction": "south", "roomId": 2},
                 {"direction": "north", "roomId": 4},
             ],
             "objects": [
-                O.spawn("Holy Grail"),
-                O.spawn("Bread"),
-                O.spawn("Wine")
+                #O.spawn(""),
+                #O.spawn(""),
+                #O.spawn("")
             ],
             "mobs": [  
-#                M.spawn("Jesus") ,
-#                M.spawn("Peter"),
-#                M.spawn("Matthew"),
-#                M.spawn("Judas"),
-#                M.spawn("John 1"),
-#                M.spawn("John 2"),
-#                M.spawn("Andrew"),
-#                M.spawn("James"),
-#                M.spawn("Philip"),
-#                M.spawn("Bartholomew"),
+#                M.spawn("") ,
+#                M.spawn(""),
+#                M.spawn(""),
+#                
             ],
         }
     ),
