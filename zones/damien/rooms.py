@@ -53,9 +53,7 @@ ROOMS: dict[int, Room] = {
             "indoors": False,
             "terrain": "stone",
             "exits": [
-                {"direction": "north", "roomId": 1},
                 {"direction": "south", "roomId": 1},
-                {"direction": "east", "roomId": 1},
                 {"direction": "west", "roomId": 5},
                 {"direction": "down", "roomId": 7},
             ],
@@ -73,8 +71,6 @@ ROOMS: dict[int, Room] = {
             "terrain": "stone",
             "exits": [
                 {"direction": "north", "roomId": 1},
-                {"direction": "south", "roomId": 1},
-                {"direction": "east", "roomId": 1},
                 {"direction": "west", "roomId": 6},
             ],
             "objects": [
@@ -96,7 +92,6 @@ ROOMS: dict[int, Room] = {
                 {"direction": "north", "roomId": 5},
                 {"direction": "south", "roomId": 6},
                 {"direction": "east", "roomId": 1},
-                {"direction": "west", "roomId": 1},
             ],
             "mobs": [
                 M.spawn("dark_glob"),
@@ -106,15 +101,13 @@ ROOMS: dict[int, Room] = {
     5: Room(
         {
             "number": 5,
-            "name": "Dead Fields",
-            "description": "The field is flat and covered with dead, brownish grass",
+            "name": "Falcon Nest",
+            "description": "In the middle of a field there is a large tree. Upon it rests a bowl shaped collection of hay, sticks, mud, and other natural items.",
             "indoors": False,
             "terrain": "grass",
             "exits": [
-                {"direction": "north", "roomId": 1},
                 {"direction": "south", "roomId": 4},
                 {"direction": "east", "roomId": 2},
-                {"direction": "west", "roomId": 1},
             ],
         }
     ),
@@ -127,9 +120,7 @@ ROOMS: dict[int, Room] = {
             "terrain": "grass",
             "exits": [
                 {"direction": "north", "roomId": 4},
-                {"direction": "south", "roomId": 1},
                 {"direction": "east", "roomId": 3},
-                {"direction": "west", "roomId": 1},
             ],
         }
     ),
