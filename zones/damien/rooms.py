@@ -27,17 +27,16 @@ ROOMS: dict[int, Room] = {
                 {"direction": "south", "roomId": 3},
                 {"direction": "east", "roomId": 1},
                 {"direction": "west", "roomId": 4},
-                {"direction": "down", "roomId": 99002, "external": True}
+                {"direction": "down", "roomId": 99002, "external": True},
+                {"direction": "up", "roomId": 8},
             ],
             "objects": [
                 O.spawn("sack_of_darkness"),
-                O.spawn("sword_that_seals_the_darkness"),
                 O.spawn('hanging_tree'),
                 O.spawn('pile_of_goo'),
                 O.spawn('falcon_feather'),      
             ],
             "mobs": [
-                M.spawn("void_dragon"),
                 M.spawn("shadow_gremlin"),
                 M.spawn("dark_mage"),
                 M.spawn("dark_glob"),
@@ -137,6 +136,26 @@ ROOMS: dict[int, Room] = {
             "mobs": [
                 M.spawn("dark_mage"),
             ],
+        }
+    ),
+    8: Room(
+        {
+            "number": 8,
+            "name": "Sword Shrine",
+            "description": "You ascend into the room and look around. You are walking on &Xdark&N &Wclouds&N."
+                           "In the middle of the room there is a stone triangular stone platform with a &Bshining&N &Csword&N in the middle."
+                           "Behind the platform lies &mInanis&N the &XVoid&N &mDragon&N, protecting the &Bshining&N &Csword&N.",
+            "indoors": False,
+            "terrain": "cloud",
+            "exits": [
+                {"direction": "down", "roomId": 1},
+            ],
+            "mobs": [
+                M.spawn("void_dragon"),
+            ],
+            "objects": [
+                O.spawn("sword_that_seals_the_darkness")
+            ]
         }
     ),
 
